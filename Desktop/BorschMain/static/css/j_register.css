@@ -1,0 +1,191 @@
+* { box-sizing:border-box; }
+
+body:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+    -webkit-filter: blur(5px) drop-shadow(2px 3px 5px black);
+    -moz-filter: blur(5px) drop-shadow(2px 3px 5px black);
+    -o-filter: blur(5px) drop-shadow(2px 3px 5px black);
+    filter: blur(4px) drop-shadow(0px 2px 2px black);
+    background: url('../img/j-login.jpeg') no-repeat transparent;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    min-width: 1080px;
+    min-height: 800px;
+    filter:
+
+}
+
+body {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    color: white;
+    min-width: 1080px;
+    min-height: 800px;
+    width: 100%;
+    height: 100vh;
+
+
+    background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+
+
+}
+
+
+
+
+.login{
+    background: transparent;
+    background: -moz-linear-gradient(top, rgba(249, 99, 55, 0.4), rgba(0, 0, 0, 0.6));
+    background: -webkit-linear-gradient(top, rgba(249, 99, 55, 0.4), rgba(0, 0, 0, 0.6));
+    background: -o-linear-gradient(top, rgba(249, 99, 55, 0.4), rgba(0, 0, 0, 0.6));
+    background: -ms-linear-gradient(top, rgba(249, 99, 55, 0.4), rgba(0, 0, 0, 0.6));
+    background: linear-gradient(top, rgba(249, 99, 55, 0.4), rgba(0, 0, 0, 0.6));
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.login__logo {
+    width: 125px;
+    height: 125px;
+    margin-bottom: 50px;
+    /*z-index: 999;*/
+}
+
+.logo {
+    background: url("../img/dwm-white.png") no-repeat;
+    background-size: cover;
+}
+
+
+/******************* begin login form ******************/
+
+.form__group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input {
+    color: #ffffff;
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:300px;
+    border:none;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding-left: 10px;
+}
+
+.input:focus {
+    outline:none;
+}
+
+.label {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    top: 12px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.filled + label, .input:focus + label {
+    top: -20px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+/*input:focus ~ .label, input:valid ~ .label{*/
+  /*top: -20px;*/
+  /*font-size: 14px;*/
+  /*color: #ffffff;*/
+/*}*/
+
+/******************* end login form ******************/
+
+/******************* begin submit button ******************/
+
+.submit {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 42px;
+    width: 300px;
+    background-color: #de5b2f;
+    border: 2px solid #de5b2f;
+    border-radius: 50px;
+    color: #d6d6d6;
+    font-size: 16px;
+    transition: 0.4s;
+    outline-style: none;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: #f96332;
+    color: #FFF;
+    transition: 0.4s;
+}
+
+/******************* end submit button ******************/
+
+.href {
+    font-size: 14px;
+    margin-top: 14px;
+    color: #d6d6d6;
+}
+
+.href:hover {
+    color: #ffffff;
+}
+
+.checkbox {
+    display: none;
+}
+.checkbox-custom {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+    margin-left: 10px;
+
+}
+.checkbox-custom,
+.checkbox__label {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.checkbox:checked + .checkbox-custom::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    left: 2px;
+    background: #f96332;
+    border-radius: 2px;
+}
+

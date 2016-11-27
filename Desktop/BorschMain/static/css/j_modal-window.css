@@ -1,0 +1,74 @@
+/********************** модальное окно начало *******************************/
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: -9999px;
+    left: -9999px;
+    visibility: hidden;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.8);
+    transition: opacity 0.2s;
+}
+
+.modal__active {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal__content {
+    margin-top: 120px;
+    margin-bottom: 100px;
+
+    max-width: 700px;
+    min-height: 320px; /*может и не надо?*/
+    padding: 40px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    overflow-y: scroll;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.2s, transform 0.2s;
+    transition-delay: 0.2s;
+}
+.modal__paragraph {
+    margin-top: 5px;
+}
+
+.modal-content__close-btn {
+    display: block;
+    float: right;
+    margin-right: -20px;
+    margin-top: -20px;
+    width: 23px;
+    height: 23px;
+    background: url(../img/close-btn.svg) no-repeat;
+    opacity: 0.5;
+    font-weight: 700;
+    line-height: 40px;
+    text-align: center;
+}
+
+.modal-content__close-btn:hover {
+    opacity: 1;
+}
+
+.modal__content__active {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.modal-lock {
+    overflow: hidden !important;
+    width: auto;
+}
+/********************** модальное окно конец *******************************/

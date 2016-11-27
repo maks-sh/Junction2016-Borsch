@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+    <link rel="stylesheet" media="screen" href="{% static "css/reset.css"%}">
+    <link rel="stylesheet" media="screen" href="{% static "css/j_layout.css"%}">
+    <link rel="stylesheet" media="screen" href="{% static "css/j_main.css"%}">
+    {% block css %}{% endblock %}
+    <script src="{% static "js/jquery-3.1.1.min.js"%}"></script>
+</head>
+<body>
+    <header class="header">
+
+        <div class="header__logo logo">
+        </div>
+
+        <nav class="header__left nav">
+            <ul class="nav__menu menu">
+                <li class="menu__el"><a class="el__ref rest_name" href="/rest/"> Restaurant name</a></li>
+                <li class="menu__el"><a class="el__ref" href="/booking/">Booking</a></li>
+{#                <li class="menu__el"><a class="el__ref" href="#">Actions</a></li>#}
+            </ul>
+        </nav>
+
+        <div class="header__right">
+            <div class="header__user">
+{#                #}
+                <a class="user__info" href="#" id="user-info"></a>
+            </div>
+            <div class="header__exit">
+                <a id="signout" class="header__exit exit">
+                    <img src="{% static "img/j-power_off.svg"%}" width="20" height="20" alt="Log out" />
+                </a>
+            </div>
+        </div>
+    </header>
+    {% block content %}{% endblock %}
+
+    <script src="{% static "js/j_layout.js"%}"></script>
+    {% block scripts %}
+
+    {% endblock %}
+</body>
+</html>

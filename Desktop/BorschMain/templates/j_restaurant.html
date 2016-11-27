@@ -1,0 +1,257 @@
+{% extends "j_layout.html" %}
+
+{% load static %}
+
+{% block title %}
+{#    ToDo вставить имя ресторана #}
+    DWM | Restaurant name
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static "css/j_restaraunt.css" %}">
+{% endblock %}
+
+{% block content %}
+    <main class="main">
+
+        <section class="main__portrait">
+            <div class="portrait">
+                {#    ToDo вставить имя ресторана #}
+                <h1 class="portrait__title title rest_name"></h1>
+                <div class="card">
+                    <div class="place">
+                        <img src="{% static "img/location.svg" %}" alt="Address" class="portrait__icon">
+                        <p class="time__value" id="address"></p>
+                    </div>
+                    <div class="time">
+                        <img src="{% static "img/clock.svg" %}" alt="Opening hours" class="portrait__icon">
+                        <p class="time__value rest_regime"></p>
+                    </div>
+                    <div class="average-bill">
+                        <img src="{% static "img/coin-euro.svg" %}" alt="Average bill" class="portrait__icon">
+                        <p class="time__value">Average bill: 10 €</p>
+                    </div>
+                    <div class="phone">
+                        <img src="{% static "img/phone.svg" %}" alt="Opening hours" class="portrait__icon">
+                        <a href="tel: +79999999999" property="telephone">+7(999)999-99-99</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="layer">
+            <section class="full-info">
+                <div class="main-info">
+                    <h2 class="main-info__title title">Main info</h2>
+                    <div class="main-info__fields">
+                        <div class="group">
+                            <div class="group__element">
+                                <h3 class="small-title"><img src="{% static "img/cutlery.svg" %}" alt="restaurant" class="small__icon">Restaurant name</h3>
+                                <div class="helper">
+                                    <div class="editable-text rest_name">
+
+                                    </div>
+                                </div>
+                                <div class="edit" id="edit-rest-name"><img class="button__icon" src="{% static "img/edit.svg" %}"> Edit</div>
+                                <div class="save save__description" id="save-rest-name"><img class="button__icon" src="{% static "img/save.svg" %}"> Save</div>
+                            </div>
+                            <div class="group__element">
+                                <h3 class="small-title"><img src="{% static "img/location.svg" %}" alt="Opening hours" class="small__icon">Restaurant coordinates</h3>
+                                <div class="helper">
+                                    <div class="editable-text rest_coord">
+
+                                    </div>
+                                </div>
+                                <div class="edit" id="edit-rest-coord"><img class="button__icon" src="{% static "img/edit.svg" %}"> Edit</div>
+                                <div class="save save__description" id="save-rest-coord"><img class="button__icon" src="{% static "img/save.svg" %}"> Save</div>
+                            </div>
+                        </div>
+                        <div class="group">
+                            <div class="group__element">
+                                <h3 class="small-title"><img src="{% static "img/clock.svg" %}" alt="Opening hours" class="small__icon">Restaurant opening hours</h3>
+                                <div class="helper">
+                                    <div class="editable-text rest_regime">
+
+                                    </div>
+                                </div>
+                                <div class="edit" id="edit-rest-oh"><img class="button__icon" src="{% static "img/edit.svg" %}"> Edit</div>
+                                <div class="save save__description" id="save-rest-oh"><img class="button__icon" src="{% static "img/save.svg" %}"> Save</div>
+                            </div>
+                            <div class="group__element">
+                                <h3 class="small-title"><img src="{% static "img/coin-euro.svg" %}" alt="Average bill" class="small__icon">Restaurant average bill</h3>
+                                <div class="helper">
+                                    <div class="editable-text">
+
+                                    </div>
+                                </div>
+                                <div class="edit" id="edit-rest-ab"><img class="button__icon" src="{% static "img/edit.svg" %}"> Edit</div>
+                                <div class="save save__description" id="save-rest-ab"><img class="button__icon" src="{% static "img/save.svg" %}"> Save</div>
+                            </div>
+                        </div>
+
+
+                        <div class="r-telephone">
+                            <h3 class="small-title"><img src="{% static "img/phone.svg" %}" alt="Opening hours" class="small__icon">Restaurant telephone</h3>
+                            <div class="helper">
+                                <div class="editable-text">
+
+                                </div>
+                            </div>
+                            <div class="edit" id="edit-rest-tel"><img class="button__icon" src="{% static "img/edit.svg" %}"> Edit</div>
+                            <div class="save save__description" id="save-rest-tel"><img class="button__icon" src="{% static "img/save.svg" %}"> Save</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="description">
+                    <h2 class="description__title title">Description</h2>
+                    <div class="helper">
+                        <div class="description__text editable-text rest_descp">
+
+                        </div>
+                    </div>
+                    <div class="edit" id="edit_desription"><img class="button__icon" src="{% static "img/edit.svg" %}"> Edit</div>
+                    <div class="save save__description" id="save_desription"><img class="button__icon" src="{% static "img/save.svg" %}"> Save</div>
+                </div>
+                <div class="menu">
+                    <h2 class="description__title title">Menu</h2>
+                    <div id="table" class="table-editable">
+                        <table class="menu__table">
+                            <tr>
+                                <th class="menu__column">Name</th>
+                                <th class="menu__column">Cuisine</th>
+                                <th class="menu__column">Ingridients</th>
+                                <th class="menu__column">Price</th>
+                                <th class="menu__column">Delete row</th>
+                            </tr>
+                          <!-- This is our clonable table line -->
+                            <tr class="hide">
+                                <td contenteditable="true">Edit me</td>
+                                <td contenteditable="true">Edit me</td>
+                                <td contenteditable="true">Edit me</td>
+                                <td contenteditable="true">Edit me</td>
+                                <td>
+                                    <span class="table-remove">
+                                        <img class="button__icon" src="{% static "img/cross.svg" %}" alt="delete">
+                                    </span>
+                                </td>
+                             </tr>
+                        </table>
+                    </div>
+                    <span class="table-add"></span>
+                    <div class="edit table__add" id="table-add"><img class="button__icon" src="{% static "img/plus.svg" %}" alt="Add"> Add</div>
+                    <div class="save tabble__save" id="save-menu"><img class="button__icon" src="{% static "img/save.svg" %}"> Save</div>
+                    <p id="export"></p>
+                </div>
+            </section>
+{#            <section class="main__slider">#}
+{#                <ul class="slides">#}
+{#                    <input type="radio" name="radio-btn" id="img-1" checked />#}
+{#                    <li class="slide-container">#}
+{#                        <div class="slide">#}
+{#                            <img src="https://gtcdn.gettable.ru/bars/2259/photos/54643/landing.jpg?1461756833" />#}
+{#                        </div>#}
+{#                        <div class="nav">#}
+{#                            <label for="img-6" class="prev">&#x2039;</label>#}
+{#                            <label for="img-2" class="next">&#x203a;</label>#}
+{#                        </div>#}
+{#                    </li>#}
+{##}
+{#                    <input type="radio" name="radio-btn" id="img-2" />#}
+{#                    <li class="slide-container">#}
+{#                        <div class="slide">#}
+{#                          <img src="https://gtcdn.gettable.ru/bars/2259/photos/54641/landing.jpg?1461756803" />#}
+{#                        </div>#}
+{#                        <div class="nav">#}
+{#                            <label for="img-1" class="prev">&#x2039;</label>#}
+{#                            <label for="img-3" class="next">&#x203a;</label>#}
+{#                        </div>#}
+{#                    </li>#}
+{##}
+{#                    <input type="radio" name="radio-btn" id="img-3" />#}
+{#                    <li class="slide-container">#}
+{#                        <div class="slide">#}
+{#                          <img src="https://gtcdn.gettable.ru/bars/2259/photos/54644/landing.jpg?1461756850" />#}
+{#                        </div>#}
+{#                        <div class="nav">#}
+{#                            <label for="img-2" class="prev">&#x2039;</label>#}
+{#                            <label for="img-4" class="next">&#x203a;</label>#}
+{#                        </div>#}
+{#                    </li>#}
+{##}
+{#                    <input type="radio" name="radio-btn" id="img-4" />#}
+{#                    <li class="slide-container">#}
+{#                        <div class="slide">#}
+{#                          <img src="https://gtcdn.gettable.ru/bars/2259/photos/54645/landing.jpg?1461756866" />#}
+{#                        </div>#}
+{#                        <div class="nav">#}
+{#                            <label for="img-3" class="prev">&#x2039;</label>#}
+{#                            <label for="img-5" class="next">&#x203a;</label>#}
+{#                        </div>#}
+{#                    </li>#}
+{##}
+{#                    <input type="radio" name="radio-btn" id="img-5" />#}
+{#                    <li class="slide-container">#}
+{#                        <div class="slide">#}
+{#                          <img src="https://gtcdn.gettable.ru/bars/2259/photos/54636/landing.jpg?1461756719" />#}
+{#                        </div>#}
+{#                        <div class="nav">#}
+{#                            <label for="img-4" class="prev">&#x2039;</label>#}
+{#                            <label for="img-6" class="next">&#x203a;</label>#}
+{#                        </div>#}
+{#                    </li>#}
+{##}
+{#                    <input type="radio" name="radio-btn" id="img-6" />#}
+{#                    <li class="slide-container">#}
+{#                        <div class="slide">#}
+{#                          <img src="https://gtcdn.gettable.ru/bars/2259/photos/54637/landing.jpg?1461756735" />#}
+{#                        </div>#}
+{#                        <div class="nav">#}
+{#                            <label for="img-5" class="prev">&#x2039;</label>#}
+{#                            <label for="img-1" class="next">&#x203a;</label>#}
+{#                        </div>#}
+{#                    </li>#}
+{##}
+{#                    <li class="nav-dots">#}
+{#                      <label for="img-1" class="nav-dot" id="img-dot-1"></label>#}
+{#                      <label for="img-2" class="nav-dot" id="img-dot-2"></label>#}
+{#                      <label for="img-3" class="nav-dot" id="img-dot-3"></label>#}
+{#                      <label for="img-4" class="nav-dot" id="img-dot-4"></label>#}
+{#                      <label for="img-5" class="nav-dot" id="img-dot-5"></label>#}
+{#                      <label for="img-6" class="nav-dot" id="img-dot-6"></label>#}
+{#                    </li>#}
+{#                </ul>#}
+{#                <div class="change-img">dsaasdasads</div>#}
+{#            </section>#}
+        </div>
+        <section>
+            <div id="map"></div>
+        </section>
+
+
+
+    </main>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static "js/editor.js"%}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6faYFe2C9wxzVJGuN0I8EwK8rsy5wSLc&callback=initMap"
+        async defer></script>
+    <script>
+function initMap() {
+    var myLatLng = {lat: 50.555565, lng: 42.286957};
+
+    // Create a map object and specify the DOM element for display.
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: myLatLng,
+      scrollwheel: false,
+      zoom: 8
+    });
+
+    // Create a marker and set its position.
+    var marker = new google.maps.Marker({
+      map: map,
+      position: myLatLng,
+      title: 'name'
+    });
+  }
+    </script>
+{% endblock %}

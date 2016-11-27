@@ -1,0 +1,122 @@
+* { box-sizing:border-box; }
+
+body {
+    color: white;
+    width: 100%;
+    height: 100vh;
+    min-height: 800px;
+    background: url('../img/j-login.jpeg') no-repeat transparent;
+    background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+}
+
+
+.login{
+    /*background: transparent;*/
+    background: -moz-linear-gradient(top, rgba(249, 99, 55, 0.4), rgba(0, 0, 0, 0.6));
+    background: -webkit-linear-gradient(top, rgba(249, 99, 55, 0.4), rgba(0, 0, 0, 0.6));
+    background: -o-linear-gradient(top, rgba(249, 99, 55, 0.4), rgba(0, 0, 0, 0.6));
+    background: -ms-linear-gradient(top, rgba(249, 99, 55, 0.4), rgba(0, 0, 0, 0.6));
+    background: linear-gradient(top, rgba(249, 99, 55, 0.4), rgba(0, 0, 0, 0.6));
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.login__logo {
+    width: 125px;
+    height: 125px;
+    margin-bottom: 100px;
+}
+
+.logo {
+    background: url("../img/dwm-white.png") no-repeat;
+    background-size: cover;
+}
+
+
+/******************* begin login form ******************/
+
+.form__group {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.input {
+    color: #ffffff;
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:300px;
+    border:none;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding-left: 10px;
+}
+
+input:focus {
+    outline:none;
+}
+
+label {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    top: 12px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.filled + label, .input:focus + label {
+    top: -20px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+/******************* end login form ******************/
+
+/******************* begin submit button ******************/
+
+.submit {
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 42px;
+    width: 300px;
+    background-color: #de5b2f;
+    border: 2px solid #de5b2f;
+    border-radius: 50px;
+    color: #d6d6d6;
+    font-size: 16px;
+    transition: 0.4s;
+    outline-style: none;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: #f96332;
+    color: #FFF;
+    transition: 0.4s;
+}
+
+/******************* end submit button ******************/
+
+.login__create {
+    font-size: 14px;
+    margin-top: 14px;
+    color: #d6d6d6;
+}
+
+.login__create:hover {
+    color: #ffffff;
+}

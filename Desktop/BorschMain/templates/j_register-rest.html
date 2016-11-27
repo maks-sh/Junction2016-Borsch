@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DWM | Login</title>
+    <link rel="stylesheet" media="screen" href="{% static "css/reset.css"%}">
+    <link rel="stylesheet" media="screen" href="{% static "css/j_register.css"%}">
+    <link rel="stylesheet" media="screen" href="{% static "css/j_modal-window.css"%}">
+    <script src="{% static "js/jquery-3.1.1.min.js"%}"></script>
+</head>
+<body>
+    <main class="login">
+        <div class="login__logo logo"></div>
+        <form class="login__form form" id="float_form" action="/apo/pa">
+            <div class="form__group">
+                <input class="input" type="text" required>
+                <label class="label">Description</label>
+            </div>
+            <div class="form__group">
+                <input class="input" type="text" required>
+                <label class="label">Opening hours</label>
+            </div>
+            <div class="form__group">
+                <input class="input" type="email" required>
+                <label class="label">Coordinate</label>
+            </div>
+            <div class="form__group">
+                <input class="input" type="password" required>
+                <label class="label">Img</label>
+            </div>
+            <button class="submit" id="next_step">Get started</button>
+        </form>
+        <a href="#terms" class="href open-modal">Terms and conditions</a>
+    </main>
+    <div id="terms" class="modal">
+        <div class="modal__content">
+            <a href="#" class="modal-content__close-btn"></a>
+            <h3 class="modal__title title">Terms and conditions for restaurants</h3>
+            <div>
+                <p class="modal__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam hendrerit ex et tellus elementum laoreet. Nullam a eros placerat, pharetra tortor id, laoreet est. Aenean pharetra fermentum mauris, eu viverra purus condimentum ac. Sed efficitur in turpis luctus facilisis. Vivamus augue mi, viverra eget lectus et, rutrum convallis magna. Etiam nulla orci, luctus sit amet fermentum id, porta quis lectus. Mauris id sollicitudin dolor. Donec nunc magna, auctor tempor vulputate nec, fermentum et diam. Mauris dignissim porttitor dui non tristique. Pellentesque ornare vehicula quam, vel pharetra orci lacinia eget. Donec ullamcorper congue purus, quis sollicitudin orci gravida at. Nam sagittis erat eu nunc faucibus, id semper nisl ullamcorper. Sed vel accumsan arcu. Donec rutrum sed felis sed placerat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                <p class="modal__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam hendrerit ex et tellus elementum laoreet. Nullam a eros placerat, pharetra tortor id, laoreet est. Aenean pharetra fermentum mauris, eu viverra purus condimentum ac. Sed efficitur in turpis luctus facilisis. Vivamus augue mi, viverra eget lectus et, rutrum convallis magna. Etiam nulla orci, luctus sit amet fermentum id, porta quis lectus. Mauris id sollicitudin dolor. Donec nunc magna, auctor tempor vulputate nec, fermentum et diam. Mauris dignissim porttitor dui non tristique. Pellentesque ornare vehicula quam, vel pharetra orci lacinia eget. Donec ullamcorper congue purus, quis sollicitudin orci gravida at. Nam sagittis erat eu nunc faucibus, id semper nisl ullamcorper. Sed vel accumsan arcu. Donec rutrum sed felis sed placerat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                <p class="modal__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam hendrerit ex et tellus elementum laoreet. Nullam a eros placerat, pharetra tortor id, laoreet est. Aenean pharetra fermentum mauris, eu viverra purus condimentum ac. Sed efficitur in turpis luctus facilisis. Vivamus augue mi, viverra eget lectus et, rutrum convallis magna. Etiam nulla orci, luctus sit amet fermentum id, porta quis lectus. Mauris id sollicitudin dolor. Donec nunc magna, auctor tempor vulputate nec, fermentum et diam. Mauris dignissim porttitor dui non tristique. Pellentesque ornare vehicula quam, vel pharetra orci lacinia eget. Donec ullamcorper congue purus, quis sollicitudin orci gravida at. Nam sagittis erat eu nunc faucibus, id semper nisl ullamcorper. Sed vel accumsan arcu. Donec rutrum sed felis sed placerat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static "js/float_labels.js"%}"></script>
+    <script src="{% static "js/j_modalWindow.js"%}"></script>
+</body>
+</html>

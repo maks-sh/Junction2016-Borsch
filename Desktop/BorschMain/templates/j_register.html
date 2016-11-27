@@ -1,0 +1,75 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DWM | Login</title>
+    <link rel="stylesheet" media="screen" href="{% static "css/reset.css"%}">
+    <link rel="stylesheet" media="screen" href="{% static "css/j_register.css"%}">
+    <link rel="stylesheet" media="screen" href="{% static "css/j_modal-window.css"%}">
+    <script src="{% static "js/jquery-3.1.1.min.js"%}"></script>
+</head>
+<body>
+    <main class="login">
+        <div class="login__logo logo"></div>
+        <form class="login__form form" id="float_form" enctype="multipart/form-data" method="POST" name="register">
+            <div class="form__group">
+                <input class="input" type="text" required name="first_name">
+                <label class="label">First Name</label>
+            </div>
+            <div class="form__group">
+                <input class="input" type="text" name="last_name">
+                <label class="label">Last Name</label>
+            </div>
+            <div class="form__group">
+                <input class="input" type="text" required name="phone_number">
+                <label class="label">Phone number</label>
+            </div>
+            <div class="form__group">
+                <input class="input" type="email" required name="email">
+                <label class="label">E-mail</label>
+            </div>
+            <div class="form__group">
+                <input class="input" type="password" required name="password">
+                <label class="label">Password</label>
+            </div>
+{#            <input class="input" type="text" hidden name="'is_admin_restaurant'" value="False" style="display: none">#}
+{#            <input class="input" type="text" hidden name="is_waiter" value="False" style="display: none">#}
+
+{#            <div class="form__group">#}
+{#                <input type="checkbox" class="checkbox" name="is_admin" id="is_admin">#}
+{#                <span class="checkbox-custom"></span>#}
+{#                <label for="is_admin" class="checkbox__label">Are you administrator of restaurant?</label>#}
+{#            </div>#}
+{#            <div id="hide" style="display:none;">#}
+{#                <div class="form__group">#}
+{#                    <input class="input" type="text" required>#}
+{#                    <label class="label">Restaurant name</label>#}
+{#                </div>#}
+{#            </div>#}
+            <button class="submit" id="register">Get started</button>
+        </form>
+        <a href="#terms" id="link_to_terms" class="href open-modal">Terms and conditions</a>
+    </main>
+    <div id="terms" class="modal">
+        <div class="modal__content">
+            <a href="#" class="modal-content__close-btn"></a>
+            <h3 class="modal__title title">Terms and conditions</h3>
+            <div>
+                <p class="modal__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam hendrerit ex et tellus elementum laoreet. Nullam a eros placerat, pharetra tortor id, laoreet est. Aenean pharetra fermentum mauris, eu viverra purus condimentum ac. Sed efficitur in turpis luctus facilisis. Vivamus augue mi, viverra eget lectus et, rutrum convallis magna. Etiam nulla orci, luctus sit amet fermentum id, porta quis lectus. Mauris id sollicitudin dolor. Donec nunc magna, auctor tempor vulputate nec, fermentum et diam. Mauris dignissim porttitor dui non tristique. Pellentesque ornare vehicula quam, vel pharetra orci lacinia eget. Donec ullamcorper congue purus, quis sollicitudin orci gravida at. Nam sagittis erat eu nunc faucibus, id semper nisl ullamcorper. Sed vel accumsan arcu. Donec rutrum sed felis sed placerat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                <p class="modal__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam hendrerit ex et tellus elementum laoreet. Nullam a eros placerat, pharetra tortor id, laoreet est. Aenean pharetra fermentum mauris, eu viverra purus condimentum ac. Sed efficitur in turpis luctus facilisis. Vivamus augue mi, viverra eget lectus et, rutrum convallis magna. Etiam nulla orci, luctus sit amet fermentum id, porta quis lectus. Mauris id sollicitudin dolor. Donec nunc magna, auctor tempor vulputate nec, fermentum et diam. Mauris dignissim porttitor dui non tristique. Pellentesque ornare vehicula quam, vel pharetra orci lacinia eget. Donec ullamcorper congue purus, quis sollicitudin orci gravida at. Nam sagittis erat eu nunc faucibus, id semper nisl ullamcorper. Sed vel accumsan arcu. Donec rutrum sed felis sed placerat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                <p class="modal__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam hendrerit ex et tellus elementum laoreet. Nullam a eros placerat, pharetra tortor id, laoreet est. Aenean pharetra fermentum mauris, eu viverra purus condimentum ac. Sed efficitur in turpis luctus facilisis. Vivamus augue mi, viverra eget lectus et, rutrum convallis magna. Etiam nulla orci, luctus sit amet fermentum id, porta quis lectus. Mauris id sollicitudin dolor. Donec nunc magna, auctor tempor vulputate nec, fermentum et diam. Mauris dignissim porttitor dui non tristique. Pellentesque ornare vehicula quam, vel pharetra orci lacinia eget. Donec ullamcorper congue purus, quis sollicitudin orci gravida at. Nam sagittis erat eu nunc faucibus, id semper nisl ullamcorper. Sed vel accumsan arcu. Donec rutrum sed felis sed placerat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                <p class="modal__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam hendrerit ex et tellus elementum laoreet. Nullam a eros placerat, pharetra tortor id, laoreet est. Aenean pharetra fermentum mauris, eu viverra purus condimentum ac. Sed efficitur in turpis luctus facilisis. Vivamus augue mi, viverra eget lectus et, rutrum convallis magna. Etiam nulla orci, luctus sit amet fermentum id, porta quis lectus. Mauris id sollicitudin dolor. Donec nunc magna, auctor tempor vulputate nec, fermentum et diam. Mauris dignissim porttitor dui non tristique. Pellentesque ornare vehicula quam, vel pharetra orci lacinia eget. Donec ullamcorper congue purus, quis sollicitudin orci gravida at. Nam sagittis erat eu nunc faucibus, id semper nisl ullamcorper. Sed vel accumsan arcu. Donec rutrum sed felis sed placerat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static "js/test.js"%}"></script>
+    <script src="{% static "js/float_labels.js"%}"></script>
+    <script src="{% static "js/j_modalWindow.js"%}"></script>
+    <script>
+
+    </script>
+</body>
+</html>

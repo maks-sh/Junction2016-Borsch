@@ -1,0 +1,205 @@
+.link {
+    color: #fff;
+}
+
+.main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.main__menu {
+    color: #fff;
+    width: 100%;
+    min-width: 1080px;
+    height: 150px;
+    background-color: #ec5e2f;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.layer {
+    width: 80%;
+    min-width: 1080px;
+    height: 100%;
+    /*min-height: 300px;*/
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.counter {
+    font-size: 25px;
+}
+
+.filter-menu {
+    /*position: relative;*/
+    /*height: 150px;*/
+    /*width: 100%;*/
+    /*background: #ec5e2f;*/
+}
+
+.filter-menu__elem {
+    display: inline;
+    margin-right: 5px;
+}
+
+.link {
+    padding: 5px 14px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.link a:hover {
+    /*padding: 5px 14px;*/
+    /*border-radius: 15px;*/
+    /*border: 1px solid #fff;*/
+
+}
+
+/*.active{*/
+    /*padding: 5px 14px;*/
+    /*border-radius: 15px;*/
+    /*border: 1px solid #fff;*/
+/*}*/
+
+.today_date__weekday {
+    margin-top: 100px;
+}
+
+.current {
+    color: #07e200;
+}
+
+.books {
+    display: flex;
+    flex-direction: column;
+}
+
+.book {
+    width: 100%;
+    min-width: 700px;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid #b9b9b9;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+
+
+.book-border {
+    border: 1px solid #ec5e2f;
+
+}
+
+.book__icon-add {
+    background: url("../img/notebook__add.svg");
+    width: 50px;
+    height: 50px;
+    margin-right: 30px;
+}
+
+.book__icon-confirmed {
+    background: url("../img/notebook__confirmed.svg");
+    width: 50px;
+    height: 50px;
+    margin-right: 30px;
+}
+
+.book_field {
+    margin: 2px 0;
+}
+
+.today_date__weekday, .today_date__day {
+    color: #ec5e2f;
+}
+
+.today_date__weekday {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+.today_date__day {
+    font-size: 14px;
+}
+
+.field__name {
+    color: #ec5e2f;
+}
+.small__icon {
+    margin-right: 5px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.el {
+    padding: 3px 6px;
+    border: 1px solid #ec5e2f;
+}
+
+.active {
+
+    border-radius: 15px;
+    border: 1px solid #f5f5f5;
+}
+
+.field__time {
+    font-size: 12px;
+    color: #b9b9b9;
+    margin-bottom: 10px;
+}
+
+.confirmed {
+    float: left;
+    margin-right: 10px;
+}
+
+.switcher {
+    float: left;
+}
+
+/************* start switcher *************/
+#switch {
+  width: 40px;
+  padding:  3px;
+  border: 2px solid #ec5e2f;
+  box-sizing: border-box;
+  opacity: 0.5;
+  -webkit-filter: grayscale(100%);
+  -webkit-transition: all 03s;
+  transition: all 0.3s;
+  border-radius: 65px;
+  cursor:pointer
+}
+
+#toggle {
+  width: 10px;
+  height: 10px;
+  background: #ec5e2f;
+  border-radius: 100%;
+  position: relative;
+  transition: all 0.3s;
+  left: 0;
+  -webkit-transition: all 0.3s;
+}
+
+#switch.hover #toggle {
+  left: 20px;
+}
+
+#switch.hover {
+  -webkit-filter:none;
+  opacity:1
+}
+
+/************* end switcher *************/

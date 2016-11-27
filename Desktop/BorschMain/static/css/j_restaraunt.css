@@ -1,0 +1,335 @@
+body {
+    width: 100%;
+    min-width: 1080px;
+}
+
+.main {
+    width: 100%;
+    min-width: 1080px;
+}
+
+
+.main__portrait {
+    color: #000;
+    height: 600px;
+    background: url("../img/Mauris.jpg") center center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.portrait {
+    font-size: 20px;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 10px 10px 10px 5px;
+    border-radius: 15px;
+}
+
+.title {
+    margin: 20px 0 10px 0;
+    font-size: 40px;
+}
+
+.portrait__icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+}
+
+.place, .time, .phone, .average-bill, .edit, .save {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.layer {
+    width: 80%;
+    min-width: 1080px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.full-info {
+    margin: 20px 0;
+}
+
+.portrait__text {
+    text-align: justify;
+}
+
+.main-info__fields {
+    display: flex;
+    justify-content: space-between;
+}
+
+.small-title {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.small__icon {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+
+
+
+
+
+.main__slider {
+    width: 100%;
+    min-width: 1080px;
+    margin: 0 auto;
+}
+
+.group__element {
+    margin-bottom: 20px;
+}
+
+
+
+
+/*************** editor begin *******************/
+.helper {
+    position: relative;
+    background: #fff;
+}
+
+.editable {
+    padding: 8px;
+    border-radius: 15px;
+    box-shadow: inset 0 0 10px #07e200;
+}
+
+.portrait__text {
+    outline: none;
+}
+
+.button__icon {
+    width: 20px;
+    height: 20px;
+}
+
+.edit, .save {
+    justify-content: space-around;
+    color: #ffffff;
+    width: 80px;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: -1px 1px 4px rgba(0,0,0,0.5);
+    padding: 5px 5px;
+}
+
+.edit {
+
+    background: #f96332;
+    opacity: 1;
+    transition: opacity .2s ease-in-out;
+}
+
+.save {
+    background: #07e200;
+}
+
+.save__description {
+    display: none;
+}
+
+.menu__table {
+    width: 100%;
+    overflow-x:auto;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.3);
+}
+
+
+th {
+    color: #fff;
+    padding: 16px 10px;
+    background: #f96332;
+    max-width: 20%;
+    width: 20%;
+    text-align: left;
+    font-weight: 500;
+    overflow-x: hidden;
+}
+
+th:first-child {
+    border-top-left-radius: 15px;
+}
+
+th:last-child {
+    border-top-right-radius: 15px;
+}
+
+td{
+    padding: 8px 12px;
+    text-align: left;
+    vertical-align:middle;
+    font-size: 14px;
+    border: 1px solid rgba(178, 178, 178, 0.3);
+}
+
+tr:nth-child(even) {
+    background-color: rgba(178, 178, 178, 0.3);
+}
+
+.menu__column {
+
+}
+
+.hide {
+    display: none;
+}
+
+.table__add {
+    float: left;
+    margin-right: 30px;
+}
+
+
+
+
+
+
+
+
+
+/*************** slider begin *******************/
+.slides {
+    float: left;
+    padding: 0;
+    width: 600px;
+    height: 400px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    margin-bottom: 26px;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.slides input { display: none; }
+
+.slide-container { display: block; }
+
+.slide {
+    opacity: 0;
+    width: 600px;
+    height: 400px;
+    display: block;
+    position: absolute;
+
+
+
+    transform: scale(0);
+
+    transition: all .7s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav label {
+    width: 100px;
+    height: 100%;
+    display: none;
+    position: absolute;
+
+	  opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+
+    transition: opacity .2s;
+
+    color: #FFF;
+    font-size: 156pt;
+    text-align: center;
+    line-height: 380px;
+    font-family: "Varela Round", sans-serif;
+    background-color: rgba(255, 255, 255, .3);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slide:hover + .nav label { opacity: 0.5; }
+
+.nav label:hover { opacity: 1; }
+
+.nav .next { right: 0; }
+
+input:checked + .slide-container  .slide {
+    opacity: 1;
+
+    transform: scale(1);
+
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .nav label { display: block; }
+
+.nav-dots {
+    top: 360px;
+	width: 100%;
+	height: 11px;
+	display: block;
+	position: absolute;
+	text-align: center;
+}
+
+.nav-dots .nav-dot {
+	top: -5px;
+	width: 11px;
+	height: 11px;
+	margin: 0 4px;
+	position: relative;
+	border-radius: 100%;
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot:hover {
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3,
+input#img-4:checked ~ .nav-dots label#img-dot-4,
+input#img-5:checked ~ .nav-dots label#img-dot-5,
+input#img-6:checked ~ .nav-dots label#img-dot-6 {
+	background: rgba(0, 0, 0, 0.8);
+}
+/*************** slider end *******************/
+
+#map {
+    height: 300px;
+    clear: both;
+    min-width: 1080px;
+}
+
+@media only screen and (max-width:1210px)
+{
+html {
+    width: 1210px;
+    margin: 0 auto;
+}
+}

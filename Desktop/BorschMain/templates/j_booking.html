@@ -1,0 +1,94 @@
+{% extends "j_layout.html" %}
+
+{% load static %}
+
+{% block title %}
+{#    ToDo вставить имя ресторана #}
+    DWM | Restaurant name
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" media="screen" href="{% static "css/j_booking.css" %}">
+    <script>
+
+    </script>
+{% endblock %}
+
+{% block content %}
+    <main class="main">
+        <section class="main__menu">
+            <div class="layer">
+                <div class="counter">
+{#                ToDo вставить количество резерваций#}
+                    <p class="counter_text" id="counter"></p>
+                </div>
+                <nav class="filter-menu">
+                    <ul>
+                        <li class="filter-menu__elem" id="today"><a class="link el active" >Today</a></li>
+                        <li class="filter-menu__elem" id="prev"><a class="linkn el" >Previous</a></li>
+                        <li class="filter-menu__elem" id="next"><a class="link el" >Future</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <section class="reservations">
+            <div class="layer">
+                <div class="today_date">
+                    <p class="today_date__weekday" id="weekday"></p>
+                    <p class="today_date__day" id="day"></p>
+                </div>
+                <div class="books" id="books">
+{#                    <form action="" class="books__add">#}
+{#                        <div class="form__group">#}
+{#                            <input class="input" type="tel" required name="phone_number">#}
+{#                            <label class="label">tel</label>#}
+{#                        </div>#}
+{#                        <div class="form__group">#}
+{#                            <input class="input" type="datetime" required name="reservation_date">#}
+{#                            <label class="label">Reservation date</label>#}
+{#                        </div>#}
+{#                        <div class="form__group">#}
+{#                            <input class="input" type="seats" required name="seats">#}
+{#                            <label class="label">Seats</label>#}
+{#                        </div>#}
+{#                        <button class="submit" id="add_book">Sign in</button>#}
+{#                    </form>#}
+{#                    <div class="book">#}
+{#                    Todo добавить имя из json #}
+{#                        <div class="book__icon-add"></div>#}
+{#                        <div class="book__text">#}
+{#                            <p class="book_field field__name bold">Sergey Ivanov</p>#}
+{#                            <p class="book_field field__time">15 minutes ago</p>#}
+{#                            <p class="book_field field__contacts bold">Contacts:</p>#}
+{#                            <ul>#}
+{#                                <li class="book_field"><a href="tel: 89851675549">#}
+{#                                    <img src="{% static "img/phone.svg" %}" alt="tel" width="15px" height="15px">#}
+{#                                    89851675549#}
+{#                                </a></li>#}
+{#                                <li class="book_field"><a href="mailto:admin@gmail.com">#}
+{#                                    <img src="{% static "img/mail.svg" %}" alt="tel" width="15px" height="15px">#}
+{#                                    admin@gmail.com</a>#}
+{#                                </li>#}
+{#                            </ul>#}
+{#                            <p class="book_field field__date"><span class="bold">Reservation date: </span>13.03.2016 3:00</p>#}
+{#                            <p class="book_field field__seats"><span class="bold">Seats: </span>5</p>#}
+{##}
+{#                            <p class="book_field confirmed bold">Confirmed: </p>#}
+{#                            <div id="switch" class="switcher" onclick="confirmed(this)">#}
+{#                                <div id="toggle">#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static "js/booking.js"%}"></script>
+{% endblock %}
