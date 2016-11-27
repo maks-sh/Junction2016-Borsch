@@ -1,0 +1,76 @@
+PODS:
+  - Alamofire (3.4.1)
+  - CardIO (5.3.2)
+  - DACircularProgress (2.3.1)
+  - DZNEmptyDataSet (1.8.1)
+  - Fashion (1.1.0):
+    - Sugar
+  - GoogleMaps (2.0.0):
+    - GoogleMaps/Maps (= 2.0.0)
+  - GoogleMaps/Base (2.0.0)
+  - GoogleMaps/Maps (2.0.0):
+    - GoogleMaps/Base (= 2.0.0)
+  - MBProgressHUD (0.9.2)
+  - MWPhotoBrowser (2.1.2):
+    - DACircularProgress (~> 2.3)
+    - MBProgressHUD (~> 0.9)
+    - SDWebImage (!= 3.7.2, ~> 3.7)
+  - NVActivityIndicatorView (2.9)
+  - PeekView (1.0.3)
+  - ReachabilitySwift (2.3.3)
+  - SDWebImage (3.8.1):
+    - SDWebImage/Core (= 3.8.1)
+  - SDWebImage/Core (3.8.1)
+  - SideMenu (1.1.9)
+  - SlideMenuControllerSwift (2.2.2)
+  - Sugar (1.2.0)
+  - SwiftyJSON (2.3.2)
+  - XLForm (3.3.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.4)
+  - CardIO
+  - DZNEmptyDataSet
+  - Fashion
+  - GoogleMaps
+  - MWPhotoBrowser (~> 2.1)
+  - NVActivityIndicatorView
+  - PeekView
+  - ReachabilitySwift
+  - SDWebImage (~> 3.8)
+  - SideMenu
+  - SlideMenuControllerSwift
+  - SwiftyJSON
+  - XLForm (from `https://github.com/xmartlabs/XLForm.git`)
+
+EXTERNAL SOURCES:
+  XLForm:
+    :git: https://github.com/xmartlabs/XLForm.git
+
+CHECKOUT OPTIONS:
+  XLForm:
+    :commit: b28c902d7340ca8d49edf56af8dcf62087c33b90
+    :git: https://github.com/xmartlabs/XLForm.git
+
+SPEC CHECKSUMS:
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  CardIO: 92c45caef0d986c4a303a7afba0c9b76ff2b1f6e
+  DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  Fashion: 82f2bb05505e3aea0977a2c23f5d8692e06f12a9
+  GoogleMaps: ed04212f95710a19639fd9950ef97b897e4391de
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MWPhotoBrowser: 5836d7aa041dc05a13de380c246826578adc5ea5
+  NVActivityIndicatorView: 0084f6be71bdf4735b5424ebfb530b1e3db3276c
+  PeekView: a8c40c71bd4703cbb70e871b2598f5c7aaa97548
+  ReachabilitySwift: e0f6b6f280effb47731acfaaa2d5ffe223703793
+  SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
+  SideMenu: e4ecb0f1061e19230e53079edb2b300081446f80
+  SlideMenuControllerSwift: e257221100c39d49edccaaeb0238b55a0c67953a
+  Sugar: 556b623f0f8846cf08de7302701892f11d567419
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  XLForm: d5c391dfc62865927b5bcab0a5a0dbfb3e02b0ec
+
+PODFILE CHECKSUM: 1cb0d682078ee84833eb100d88de25944c3d6fcb
+
+COCOAPODS: 1.1.0.beta.1
