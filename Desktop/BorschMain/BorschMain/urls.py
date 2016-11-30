@@ -13,17 +13,16 @@ from BorschApi.views import RestaurantListDishesNewUserRSView
 from BorschApi.views import llogin, rrest, rregister, bbooking
 
 
-
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/', include('BorschApi.urls')),
     url(r'^generate/ingridients/', AddIngridientToTableView.as_view()),#Генерация таблицы ингридиенты
     url(r'^rs/', RestaurantListDishesNewUserRSView.as_view()),
     url(r'^generate/dish/', AddDishesToTableView.as_view()),#Генерация таблицы пользователи
-    url(r'^login/$', llogin, name='j'),
-    url(r'^rest/$', rrest, name='j'),
-    url(r'^register/$', rregister, name='j'),
-    url(r'^booking/$', bbooking, name='j'),
+    url(r'^login/$', llogin, name='login'),
+    url(r'^rest/$', rrest, name='restaurant'),
+    url(r'^register/$', rregister, name='registration'),
+    url(r'^booking/$', bbooking, name='booking'),
     # url(r'^generate/users/', AddUserToTableView.as_view()),#Генерация таблицы пользователи
     # url(r'^generate/restaurants/', AddRestaurantToTableView.as_view()),#Генерация таблицы ресторанов
     # url(r'^generate/orders/', AddOrdersToTableView.as_view()),#Генерация таблицы заказов

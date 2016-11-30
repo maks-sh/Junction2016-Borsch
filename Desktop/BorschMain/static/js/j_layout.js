@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $.ajax({
-        url: "http://188.166.65.99:8080/api/get/user/",
+        url: "/api/get/user/",
         type: 'GET',
         success: function (data_user) {
 
@@ -9,7 +9,7 @@ $(document).ready(function() {
             $('#user-info').text(user_data.first_name + ' ' + (user_data.last_name == '' ? user_data.first_name : ''));
             console.log(user_data.first_name);
             $.ajax({
-                url: "http://188.166.65.99:8080/api/get/restaurant/" + user_data.restaurant,
+                url: "/api/get/restaurant/" + user_data.restaurant,
                 type: 'GET',
                 success: function (rest_data) {
                     // $('.el__ref').click(function() {
@@ -39,7 +39,7 @@ $(document).ready(function() {
                         $('#weekday').text(getWeekDay(date));
                         $('#day').text(date.toLocaleString("en-US", { year: 'numeric', month: 'long', day: 'numeric'}));
                         $.ajax({
-                            url: "http://188.166.65.99:8080/api/get/restaurant/" + user_data.restaurant + "/booking/today",
+                            url: "/api/get/restaurant/" + user_data.restaurant + "/booking/today/",
                             type: 'GET',
                             success: function(data_today) {
                                 fetch(data_today);
@@ -49,7 +49,7 @@ $(document).ready(function() {
                                 withCredentials: true,
                             },
                             error: function() {
-                                window.location.href = "/j-login/";
+                                window.location.href = "/login/";
                                 data = {
                                     'msg': 'To look this page you should be sign in'
                                 }
@@ -66,40 +66,25 @@ $(document).ready(function() {
                 },
             });
             $('#signout').click(function(event) {
-                function getCookie(name) {
-                      var cookieValue = null;
-                      if (document.cookie && document.cookie != '') {
-                            var cookies = document.cookie.split(';');
-                      for (var i = 0; i < cookies.length; i++) {
-                           var cookie = jQuery.trim(cookies[i]);
-                      // Does this cookie string begin with the name we want?
-                      if (cookie.substring(0, name.length + 1) == (name + '=')) {
-                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                          break;
-                         }
-                      }
-                  }
-             return cookieValue;
-            }
-                var csrftoken = getCookie('csrftoken');
-
                 event.preventDefault();
                 $.ajax({
+                    headers: {
+                        "X-CSRFToken": getCookie('csrftoken')
+                    },
                     type: 'DELETE',
-                    url: 'http://188.166.65.99:8080/api/auth/logout/',
-                    data : { csrfmiddlewaretoken : csrftoken},
+                    url: '/api/auth/logout/',
                     xhrFields: {
                         withCredentials: true,
                     },
                     success: function () {
-                        window.location.href = "http://188.166.65.99:8080/login/";
+                        window.location.href = "/login/";
                     }
                 });
             });
             $('#prev').click(function() {
                 $.ajax({
                     type: 'GET',
-                    url: "http://188.166.65.99:8080/api/get/restaurant/" + user_data.restaurant + "/booking/prev",
+                    url: "/api/get/restaurant/" + user_data.restaurant + "/booking/prev",
                     xhrFields: {
                         withCredentials: true,
                     },
@@ -112,7 +97,7 @@ $(document).ready(function() {
             $('#next').click(function() {
                 $.ajax({
                     type: 'GET',
-                    url: "http://188.166.65.99:8080/api/get/restaurant/" + user_data.restaurant + "/booking/future",
+                    url: "/api/get/restaurant/" + user_data.restaurant + "/booking/future",
                     xhrFields: {
                         withCredentials: true,
                     },
@@ -125,7 +110,7 @@ $(document).ready(function() {
             $('#today').click(function() {
                 $.ajax({
                     type: 'GET',
-                    url: "http://188.166.65.99:8080/api/get/restaurant/" + user_data.restaurant + "/booking/today",
+                    url: "/api/get/restaurant/" + user_data.restaurant + "/booking/today/",
                     xhrFields: {
                         withCredentials: true,
                     },
@@ -145,7 +130,7 @@ $(document).ready(function() {
             withCredentials: true,
         },
         error: function() {
-            window.location.href = "/j-login/";
+            window.location.href = "/login/";
             data = {
                 'msg': 'To look this page you should be sign in'
             }
@@ -199,3 +184,19 @@ function fetch(data, previous) {
         html += '" onclick="confirmed(this)"><div id="toggle"></div></div></div></div>'
         return html;
     }
+
+function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie != '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = jQuery.trim(cookies[i]);
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}

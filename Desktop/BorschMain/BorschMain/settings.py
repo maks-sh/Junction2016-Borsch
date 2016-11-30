@@ -25,7 +25,7 @@ SECRET_KEY = 's1g8suysboj_$#)7ec9b^_6x41s3v9bj6zx0qs+2$d%d)c4%r5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['188.166.65.99', 'dealwithmeal.tech']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -145,5 +145,5 @@ import os
 
 _PATH = os.path.abspath(os.path.dirname(__file__))
 
-MEDIA_ROOT = 'D:/Finland/BorschMain/'
+MEDIA_ROOT = '../BorschMain/'
 MEDIA_URL = '/media/'

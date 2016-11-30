@@ -714,14 +714,18 @@ class AddDishesToTableView(generics.CreateAPIView):
                 a.save()
         return Response(status=201)
 
+
 def llogin(request):
     return render_to_response('j_login.html', {})
-    
+
+
 def rregister(request):
     return render_to_response('j_register.html', {})
-    
+
+
 def rrest(request):
     return render_to_response('j_restaurant.html', {})    
-    
+
+
 def bbooking(request):
     return render_to_response('j_booking.html', {})                   
