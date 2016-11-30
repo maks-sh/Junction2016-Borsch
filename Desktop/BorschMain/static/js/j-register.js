@@ -11,7 +11,7 @@ $('#register').click(function(event) {
                 'is_waiter': 'False'};
         $.ajax({
             type: 'POST',
-            url: 'http://188.166.65.99:8080/api/register/',
+            url: '/api/register/',
             data: data,
             xhrFields: {
                 withCredentials: true,
@@ -19,7 +19,7 @@ $('#register').click(function(event) {
             success: function () {
                 $.ajax({
                     type: 'POST',
-                    url: 'http://188.166.65.99:8080/api/auth/login/',
+                    url: '/api/auth/login/',
                     data: {
                         'phone_number': data.phone_number,
                         'password': data.password
@@ -27,7 +27,7 @@ $('#register').click(function(event) {
                         withCredentials: true,
                     },
                     success: function () {
-                        window.location.href = "http://188.166.65.99:8080/rest/";
+                        window.location.href = "/rest/";
 
 
                     }
