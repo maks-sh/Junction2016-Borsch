@@ -77,8 +77,8 @@ We would like to extend our recommender system and work not only with dishes, bu
 
 # Our BORSCH crew
 
-- [Sergey Ignatushchenko](https://github.com/alsedi28) - Back-end developer;
-- [Alexander Shoshiashvili](https://github.com/aleksandrshoshiashvili) - iOS developer;
-- [Maksim Shevchenko](https://github.com/maks-sh) - Front-end developer, Analyst;
-- [Alexander Ivanov](https://github.com/heatle) - Analyst, Researcher;
-- [Denis Merkushin](https://github.com/DenRUS) - Analyst, Researcher.
+- [Sergey Ignatushchenko](https://github.com/alsedi28) - Back-end developer
+- [Alexander Shoshiashvili](https://github.com/aleksandrshoshiashvili) - iOS developer
+- [Maksim Shevchenko](https://github.com/maks-sh) - Front-end developer, Analyst
+- [Alexander Ivanov](https://github.com/heatle) - Analyst, Researcher
+- [Denis Merkushin](https://github.com/DenRUS) - Analyst, Researcher
